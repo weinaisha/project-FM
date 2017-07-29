@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="referrer" content="never">
+  <link rel="stylesheet" type="text/css" href="src/iconfont/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="src/css/index.css">
+  <script>
+    var pageWidth=document.documentElement.clientWidth
+    console.log(pageWidth)
+    if (pageWidth<450) {
+      var content='html{font-size:'+pageWidth/36+'px;}'
+    }else{
+      var content='html{font-size:10px;}'
+    }
+    var style=document.createElement('style')
+    style.innerHTML=content
+    document.head.appendChild(style) 
+  </script>
+</head>
+<body>
+  <div class="fm-wrap">
+    <header class="nav">
+      <i class="iconfont icon-liebiao"></i>
+      <i class="iconfont icon-bofangqi_shouyegeci_"></i>
+    </header>
+    <div class="title-wrap">
+      <p class="title"></p>
+    </div>
+    <main class="panel">
+      <div class="visual">
+        <div class="img-infor">
+          <img src=""/>
+        </div>
+      </div>
+      <div class="lyrics"></div>
+    </main> 
+    <div class="options">
+      <i class="iconfont icon-shengyin"></i>
+      <div>
+        <i class="changeSong iconfont icon-first-page"></i>
+        <i class="switch iconfont icon-play1"></i>
+        <i class="changeSong iconfont icon-last2"></i>
+      </div>
+      <i class="setting iconfont icon-danquxunhuan">
+      </i>
+    </div>
+    <div class="volume">
+      
+      <div class="volume-bar"></div>
+      <div class="volume-now"></div>
+    </div>
+    <div class="progress">
+      <div class="current-time">00:00</div>
+      <div class="bar">
+        <div class="total"></div>
+        <div class="now"></div>
+      </div>
+      <div class="duration-time">00:00</div>
+    </div>
+    <div class="album">
+      <header> 
+        <i class="iconfont icon-goback"></i>
+        <span>电台</span>
+      </header>
+      <ul>
+      </ul>
+    </div>  
+ </div>
+</body>
+<script src="src/jquery-3.2.1.js"></script>
+<script src="src/js/index.js"></script>
+</html>

@@ -1,0 +1,199 @@
+@keyframes rotate{
+  from{
+    transform: rotateZ(45deg);
+  }
+  to{
+    transform: rotateZ(358deg);
+  }
+}
+@media screen and (max-width: 400px) {
+  html,body{
+    height: 100%;
+  }
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fm-wrap{
+  width: 32rem;
+  height: 100%;
+  padding: 8px 16px;
+  background: #262835;
+  position: relative;
+  box-shadow: 2px 7px 6px #666;
+  border-radius: 4px;
+}
+@media screen and (min-width: 401px) {
+  .fm-wrap{
+    height: 530px;
+    margin-top: 70px;
+  } 
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+.panel{
+  position: relative;
+  font-size: 1.6rem;
+  height: 65%;
+  perspective: 6000px;
+  overflow: hidden;
+}
+.visual,.lyrics{
+  position: absolute;
+  width: 100%;
+  color: #ccc;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+.visual{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-wrap{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img-infor{
+  width: 15.5rem;
+  height: 15.5rem;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  overflow: hidden;
+  animation:rotate 22s infinite linear;
+}
+.img-infor>img{
+  width: 100%
+}
+.title-wrap .title{
+  font-size: 1.6rem;
+  color: #ccc;
+}
+.lyrics p{
+  text-align: center;
+}
+.lyrics{
+  transform: rotateY(90deg);
+  padding: 10px 40px 20px 40px;
+}
+.lyrics-change{
+  color:#7fffdc;
+  font-size:1.8rem;
+}
+.fm-wrap .showlyrics{
+  transform:rotateY(0deg)
+}
+.hidevisual{
+  transform:rotateY(-90deg)
+}
+.options{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  margin-bottom: 1.2rem;
+}
+.volume{
+  position: absolute;
+  bottom: 6.7rem;
+  left: 3.2rem;
+  height: 4px;
+  width: 70px;
+  display: none; 
+  cursor: pointer;
+}
+.fm-wrap .show-volume{
+  display: block;
+}
+.volume .volume-bar{
+  width: 100%;
+  height: 4px;
+  background: #ccc;
+}
+.volume .volume-now{
+  background: #de6161;
+  margin-top: -4px;
+  height: 4px;
+  width: 0;
+}
+.progress{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.progress .bar{
+  width: 100%;
+  cursor: pointer;
+}
+.progress .bar>.total{
+  height: 3px;
+  background: #57585d;
+  width: 100%;
+}
+.progress .bar>.now{
+  margin-top: -3px;
+  height: 3px;
+  background: #de6161;
+  width: 0;
+}
+.progress .current-time{
+  margin-right: 6px;
+  color: #ccc;
+}
+.progress .duration-time{
+  margin-left: 6px;
+  color: #ccc;
+}
+.album{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #666;
+  width: 100%;
+  display: none;
+}
+.album ul{
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-grow: grow;
+  flex-wrap: wrap;
+  background: #262835;
+  justify-content: space-between;
+}
+.album header{
+  padding: 7px;
+  background: #262835;
+  border: 1px solid #91b3b0;
+  color: #fff;
+  display: flex;
+  justify-content:space-between;
+}
+.album ul>li{
+  padding: 20px 16px;
+  border: 1px solid #91b3b0;
+  border-top: none;
+  border-right: none;
+  color: #c6cccb;
+  flex-grow: 1;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+.album ul>li:hover{
+  font-size: 15px;
+  background: rgba(23, 49, 47, 0.82);
+}
