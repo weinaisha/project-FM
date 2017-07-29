@@ -159,7 +159,7 @@ function scrollLyrics(){
   }
 }
 //获取全部专辑
-getAlbum(" http://api.jirengu.com/fm/getChannels.php").then(function(json) {
+getAlbum("http://api.jirengu.com/fm/getChannels.php").then(function(json) {
   renderAlbum(json)
 }).catch((error)=>alert('出错了'+ error))
 //渲染专辑页
