@@ -181,7 +181,7 @@ function common(){
       return addSong(song)
     }).then((song_id)=>{
       // console.log('song_id:'+song_id)
-      var url='http://jirenguapi.applinzi.com/fm/getLyric.php?&sid='+song_id
+      var url='https://jirenguapi.applinzi.com/fm/getLyric.php?&sid='+song_id
       getLyrics(url).then((lyrics)=>renderLyrics(lyrics))
     })
   playMusic()
