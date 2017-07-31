@@ -159,7 +159,7 @@ function scrollLyrics(){
   }
 }
 //获取全部专辑
-getAlbum("http://api.jirengu.com/fm/getChannels.php").then(function(json) {
+getAlbum("https://jirenguapi.applinzi.com/fm/getChannels.php").then(function(json) {
   renderAlbum(json)
 }).catch((error)=>alert('出错了'+ error))
 //渲染专辑页
@@ -176,7 +176,7 @@ var changeSong=function(btn){
 }
 //公共方法promise异步操作,获取音乐后获取歌词并渲染
 function common(){
-  getSong('http://api.jirengu.com/fm/getSong.php?channel='+album_id).then(function(song){
+  getSong('https://jirenguapi.applinzi.com/fm/getSong.php?channel='+album_id).then(function(song){
       console.log('song:'+song)
       return addSong(song)
     }).then((song_id)=>{
